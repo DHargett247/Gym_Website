@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<!--Dwight Hargett-->
+<!--8/13/18-->
+<!--CST2409 WebProgramming-->
+<html>
+	<head>
+		<title>Html and JavaScript</title>
+		
+		<style>
+			body
+			{
+				background-image: url(stars.jpg);
+			}
+			h1
+			{
+				font-family:Imprint MT Shadow;
+				color: #F5F5DC;
+				font-size:250%;
+			}
+			p{
+			   font-family:Verdana;
+			   text-align:left;
+			   font-size:120%;
+			   width:48%;
+			   color:#EAE0C8;
+			 }
+			 p.right
+			{
+			   border: 3px solid silver;
+			   border-radius: 15px;
+			   float:right;
+			   font-family:Verdana;
+			   width:35%;
+			   text-align:center;
+			   font-size:140%;
+			   color:#EAE0C8;
+			}
+		    
+			img.ex
+			{
+				align:left;
+				border: 3px solid silver;
+				border-radius: 25px;
+			}
+			h2
+			{color:#FFBF00;}
+			h2.white
+			{color:#F5F5DC;
+			font-family:Imprint MT Shadow;}
+			div
+			{
+			   text-align:center;
+			   background-size: 100% 100%;
+			   border: 3px solid silver;
+			   background-image: url('japanog.jpg');
+			   padding-top: 0px;
+			   padding-right: 0px;
+			   padding-bottom: 0px;
+			   padding-left: 0px;
+			   border-radius: 25px;
+			   margin:auto;
+			   width: 60%;
+			   padding: 10px;
+			}
+			div.ex
+			{
+			   text-align:center;
+			   background-size: 100% 100%;
+			   border: 3px solid silver;
+			   background-image: url('dark-gray.jpg');
+			   padding-top: 0px;
+			   padding-right: 0px;
+			   padding-bottom: 0px;
+			   padding-left: 0px;
+			   border-radius: 25px;
+			   margin:auto;
+			   width: 26%;
+			   padding: 6px;
+			}
+			div.exl
+			{
+			   text-align:left;
+			   background-size: 100% 100%;
+			   border: 3px solid silver;
+			   background-image: url('dark-gray.jpg');
+			   padding-top: 0px;
+			   padding-right: 0px;
+			   padding-bottom: 0px;
+			   padding-left: 0px;
+			   border-radius: 25px;
+			   margin:auto;
+			   width: 65%;
+			   padding: 10px;
+			}
+			ir 
+			{
+			  float: right;
+			  margin: 0px 0px 15px 20px;
+			}
+
+			il 
+			{
+			  float:left;
+			  margin: 0px 0px 12px 40px;
+			}
+			hr
+			{
+				width:50%;
+				color:;
+				size:4px;
+			}
+
+			a
+			{
+			  align:center;
+			  font-family:Imprint MT Shadow;
+			  font-size:160%;
+			  color: white;
+			}
+			a:link {
+				text-decoration: none;
+			   }
+			a:visited {
+				   text-decoration: none;
+				  }
+			a:hover {
+				   text-decoration: underline;
+				}
+			a:active {
+				   text-decoration: underline;
+				 }
+
+		</style>
+		<script>
+			var imgArray = new Array(4);
+			var title=[];
+			var text=[];
+			var i = 0;
+			
+			
+			function select()
+			{	
+					document.banner.src = imgArray[i].src;
+					document.getElementById("title").innerHTML = title[i];
+					document.getElementById("text").innerHTML = text[i];
+					setTimeout("select()", 6000);
+					i++
+					
+					if(i > 4)
+						i = 0;
+				    return;
+			}
+			
+			function startUp()
+			{
+				title.push("Full foam pool");
+				title.push("Full set Bar Swing");
+				title.push("Specialty obstacles");
+				title.push("Warped Wall climb");
+				title.push("Get Ready To Run!!");
+				text.push("This will allow for practitioner to preform more advanced maneuvers without the risk of serious injury.");
+				text.push("This bar set has a wide variety of high, low, far, close, swinging bars to practice many acrobatic stunts.");
+				text.push("We have a set of very advanced equipment developed for more adept practitioners to train themselves.");
+				text.push("A very well known obstacle to many Gymnasts and Traucers(street-gymnasts) alike that is very fun for everyone.");
+				text.push("");
+				imgArray[0] =new Image;
+				imgArray[0].src = "gym1.jpg" ;
+				imgArray[1] =new Image;
+				imgArray[1].src = "fullgym.jpg" ;
+				imgArray[2] =new Image;
+				imgArray[2].src = "gym3.jpg" ;
+				imgArray[3] =new Image;
+				imgArray[3].src = "wall.jpg" ;
+				imgArray[4] =new Image;
+				imgArray[4].src = "Symbol.jpg" ;
+				select();
+				return;
+			}
+			
+		</script>
+		
+	</head>
+	<body onLoad="startUp()">
+		<br/>
+			
+		<br/><a name="top"></a>
+		<div>
+		<h1><a href="index.html"><img width="250" height="200" src="ninja2.png"/></a></h1>
+		<h1>Welcome to NinJa Star Gym</h1>
+		<h1>43-20 52nd St, Woodside, NY 11377</h1>
+		<h2 class="white">(718)231-9940</h2>
+		<br/>
+		<a href="index.html">Main page</a> &middot; <a href="Events.html">Events</a> &middot;
+		<a href="formvalidation.html">Sign Up</a> 
+		</div>	
+		<br/>
+		<br/>
+		
+		
+			<div class="exl">
+			<br/><ir><img src=traucer.png height=120 width=220></ir>
+				 <il><img src=ninja_head2.png height=120 width=200></il><h1 style="text-align:right">Our Mission:</h1>
+					 <ir><p class="right">This gym is Dedicated to Creating a space for people who would like to train in the way of the French Martial Art of Manuvering,
+					 known as Parkour. Our Gym is open to ages 10 and up. We welcome any and all to practice a variety of techniques to enhance there level of mobility.</p></ir>
+			<br/>
+			<img class="ex" name="banner" width="500" height="470" src="wall.jpg"/>
+			<br/>
+			<b><p id="title"></p></b>
+			<p id="text"></p><br/>
+			<h2>Come Take Flight!</h2>
+			<center><h1>Warehouse Location</h1><hr/><br/><a target="_blank" href="https://www.google.com/maps/place/43-20+52nd+St,+Woodside,+NY+11377/@40.7433776,-73.9134449,18z/data=!4m18!1m12!4m11!1m3!2m2!1d-73.9126516!2d40.7435294!1m6!1m2!1s0x89c25edfd91faf65:0xd52b8824bf27c0f6!2s43-24-43-26+52nd+St,+Woodside,+NY+11377!2m2!1d-73.912682!2d40.7432835!3m4!1s0x89c25edfd91faf65:0x9da59112805f1f32!8m2!3d40.7435204!4d-73.9126318">
+			<img class="ex" src="location.png" alt="Image of location from map"/></a>
+			<br/><br/>
+			<a href="mailto:Dwight.Hargett@mail.citytech.cuny.edu?Subject=Hello%20again" target="_top">contact-us!</a><br/><br/>
+			<a href="#top">Go to the top<a></center>
+		    </div>
+			
+			
+</div>
+<!--Source of images:"google images"-->
+	</body>
+</html>
+<!--The Hw-->
